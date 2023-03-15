@@ -1,18 +1,26 @@
-# SenuwanGs.github.io
+<!DOCTYPE html>
 <html>
   <head>
     <title>Password Manager</title>
   </head>
   <body>
     <h1>Password Manager</h1>
-    <form>
+    <form id="login-form">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username"><br><br>
       <label for="password">Password:</label>
       <input type="password" id="password" name="password"><br><br>
-      <button type="button" onclick="addPassword()">Add Password</button>
+      <button type="submit">Login</button>
     </form>
-    <ul id="password-list"></ul>
+    <div id="password-manager" style="display:none;">
+      <form id="password-form">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Add Password</button>
+      </form>
+      <ul id="password-list"></ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="password-manager.js"></script>
   </body>
 </html>
